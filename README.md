@@ -1,5 +1,5 @@
 # yqt-sdk-php
-# YQT-SDK 服务介绍
+# YQT-SDK-PHP 服务介绍
 
 > YQT-SDK-PHP是基于[YQT](http://doc.jia007.com)接口封装的开发工具包。她屏蔽了大部分细节、简化了接入流程、同时提供了一些便捷的方法。帮助开发者在接入过程中避开一些常见的问题，让开发者快速接入[YQT](http://doc.jia007.com)的服务。
 
@@ -27,6 +27,7 @@ $agentNO = '';//商编
 //商户秘钥（前16位）
 $aes->set_key('');//秘钥
 $aes->require_pkcs5();
+
 //请求参数
 $data = array(
 'requestNo'=>'asdfghj123456789sd',
@@ -42,6 +43,7 @@ $data = array(
 'sceneType'=>'MIS',
 'clientIp'=>'192.168.1.1'
 );
+
 //对请求参数进行加密
 $from = $aes->encrypt(json_encode($data));
 
@@ -51,10 +53,8 @@ $params = "appKey=$agentNO&data=$from";
 
 //接口请求返回加密内容
 $result = $request_yqt->curl_post($url,$params);
+
 //对接口返回内容进行解密
-
-
-//打印输出
 if(strpos($result,'code') !== false){
 //由于未请求到业务系统，返回未加密字符串
 print_r(json_decode($result));
@@ -67,12 +67,12 @@ print_r(json_decode($froms));
 Console打印日志为：
 
 (
-[code] => 1
-[orderAmount] => 0.01
-[orderNo] => 11171110141733367670
-[redirectUrl] => weixin://wxpay/bizpayurl?pr=ELVjB5S
-[message] => 受理成功
-[status] => PROCESS
+    [code] => 1
+    [orderAmount] => 0.01
+    [orderNo] => 11171110141733367670
+    [redirectUrl] => weixin://wxpay/bizpayurl?pr=ELVjB5S
+    [message] => 受理成功
+    [status] => PROCESS
 )
 
 ```
