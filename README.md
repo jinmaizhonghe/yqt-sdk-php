@@ -1,5 +1,5 @@
 # yqt-sdk-php
-# YQT-SDK-PHP 服务介绍
+# 服务介绍
 
 > YQT-SDK-PHP是基于[YQT](http://doc.jia007.com)接口封装的开发工具包。她屏蔽了大部分细节、简化了接入流程、同时提供了一些便捷的方法。帮助开发者在接入过程中避开一些常见的问题，让开发者快速接入[YQT](http://doc.jia007.com)的服务。
 
@@ -65,7 +65,6 @@ print_r(json_decode($froms));
 }
 
 Console打印日志为：
-
 (
     [code] => 1
     [orderAmount] => 0.01
