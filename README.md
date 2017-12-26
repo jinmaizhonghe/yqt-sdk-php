@@ -31,7 +31,7 @@ $aes->require_pkcs5();
 //请求参数
 $data = array(
 'requestNo'=>'asdfghj123456789sd',
-'merchantNo'=>'1051100110000070',
+'merchantNo'=>'商户编号',
 'orderAmount'=> '0.01',
 'payTool' =>'WECHAT_SCAN',
 'currency'=>'CNY',
