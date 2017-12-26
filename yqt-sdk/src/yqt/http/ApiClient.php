@@ -24,7 +24,9 @@ namespace yqt\http;
          $params[CURLOPT_FOLLOWLOCATION] = true;
          $params[CURLOPT_USERAGENT] = 'Mozilla/5.0 (Windows NT 5.1; rv:9.0.1) Gecko/20100101 Firefox/9.0.1';
          $params[CURLOPT_POST] = true;
-         $params[CURLOPT_TIMEOUT] = 10;//定义超时3秒钟
+         $params[CURLOPT_TIMEOUT] = 30;//定义超时3秒钟
+         $params[CURLOPT_SSL_VERIFYPEER] = false;
+         $params[CURLOPT_SSL_VERIFYHOST] = false;
          $params[CURLOPT_POSTFIELDS] = $str_from;
          curl_setopt_array($ch, $params);
          $content = curl_exec($ch);
